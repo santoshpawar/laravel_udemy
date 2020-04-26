@@ -27,7 +27,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
+//user has many question
+    public function questions(){
+        return $this->hasMany(Question::class);
+    }
     /**
      * The attributes that should be cast to native types.
      *
