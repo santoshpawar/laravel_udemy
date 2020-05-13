@@ -34,9 +34,15 @@ class User extends Authenticatable
     /**
      * The attributes that should be cast to native types.
      *
-     * @var array
+     * @var a
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getUrlAttribute(){
+   // return route("question.show", $this->id);
+return route("questions.show", $this->id);
+     //   return "sasa" ;
+}
 }
